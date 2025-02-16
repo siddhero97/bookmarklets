@@ -7,8 +7,7 @@
         html2pdf().set({
             margin: 5,
             filename: `${timestamp}.pdf`,
-            html2canvas: {scale: 2, logging: false},
-            jsPDF: {unit: 'mm', format: 'a4', orientation: 'portrait'}
+            html2canvas: {scale: 2, logging: false}
         }).from(element).save();
     };
     document.body.appendChild(script);
