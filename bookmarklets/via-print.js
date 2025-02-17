@@ -4,8 +4,8 @@
     document.head.appendChild(style);
     // Get elements with a dialog and artifacts
     let temp = document.createElement('div'),
-        e1 = document.querySelector('div.flex.flex-1.flex-col.gap-3.px-4'),
-        e2 = document.querySelector('div.flex.flex-1.overflow-x-auto.overflow-y-scroll');
+        e1 = document.querySelector('div[data-test-render-count]').parentElement,
+        e2 = document.querySelector('div.fixed div.overflow-y-scroll');
     temp.id = 'temp';
     // Add the element with a dialog to print
     temp.appendChild(e1.cloneNode(true));
