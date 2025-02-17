@@ -10,7 +10,7 @@ This tool is:
 
 ## Usage
 
-1. Add a new bookmark to your browser with any name (e.g. "Claude to PDf") and the following code as URL:
+1. Add a new bookmark to your browser with any name (e.g. "Claude to PDF") and the following code as URL:
 
     ```javascript
    javascript:(function(){let s=document.createElement('script');s.src='https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js';s.onload=function(){let t=new Date().toISOString().replace(/[-:T.]/g,'').slice(0,14),e1=document.querySelector('div.flex.flex-1.flex-col.gap-3.px-4'),e2=document.querySelector('div.flex.flex-1.overflow-x-auto.overflow-y-scroll');let pdf=html2pdf().set({margin:5,filename:`${t}.pdf`,html2canvas:{scale:2,logging:false}}).from(e1);e2&&(pdf=pdf.toPdf().get('pdf').then(pdfObj=>pdfObj.addPage()).from(e2).toContainer().toCanvas().toPdf());pdf.save();};document.body.appendChild(s);})();
