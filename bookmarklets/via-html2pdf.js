@@ -2,7 +2,7 @@
     let script = document.createElement('script');
     script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js';
     script.onload = function () {
-        // Get a timestamp and an element with a dialog
+        // Get a timestamp and elements with a dialog and artifacts
         let ts = new Date().toISOString().replace(/[-:T.]/g, '').slice(0, 14),
             e1 = document.querySelector('div.flex.flex-1.flex-col.gap-3.px-4'),
             e2 = document.querySelector('div.flex.flex-1.overflow-x-auto.overflow-y-scroll');
