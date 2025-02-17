@@ -1,4 +1,5 @@
 (function () {
+    /* v. 0.4, github.com/give-me/claude */
     let script = document.createElement('script');
     script.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js';
     script.onload = function () {

@@ -1,4 +1,5 @@
 (function () {
+    /* v. 0.4, github.com/give-me/claude */
     let style = document.createElement('style');
     style.textContent = '@media print{body>*{display:none!important}#temp{display:flex!important;flex-direction:column}}';
     document.head.appendChild(style);
