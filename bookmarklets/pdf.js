@@ -1,12 +1,29 @@
 (function () {
-    /* v. 0.5, github.com/give-me/claude */
+    /* v. 0.5, github.com/give-me/bookmarklets */
     // Get elements with a dialog and others
-    let elements = [
-        // Dialog
-        (document.querySelector('div[data-test-render-count]').parentElement),
-        // Open artifacts
-        document.querySelector('div.fixed div.relative.w-full[class*="overflow-"]')
-    ];
+    let elements = [];
+    switch (location.hostname) {
+        case 'claude.ai':
+            // Dialog
+            elements.push(document.querySelector('div[data-test-render-count]').parentElement);
+            // Open artifacts
+            elements.push(document.querySelector('div.fixed div.relative.w-full[class*="overflow-"]'));
+            break;
+        case 'chatgpt.com':
+            // Dialog
+            elements.push(document.querySelector('article').parentElement);
+            // Open canvas
+            elements.push(document.querySelector('section.popover>main'));
+            break;
+        case 'grok.com':
+            // Dialog
+            elements.push(document.querySelector('div.\\@container\\/main>div:first-child>div'));
+            // Open thoughts
+            elements.push(document.querySelector('aside'));
+            break;
+        default:
+            return alert(location.hostname + ' is not supported');
+    }
     console.debug(`Found elements at ${location.hostname}:`, elements);
     elements = elements.filter(n => n);
     if (confirm('Confirm if a PDF should be searchable')) {
