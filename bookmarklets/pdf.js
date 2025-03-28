@@ -1,5 +1,5 @@
 (function () {
-    /* v. 0.5, github.com/give-me/bookmarklets */
+    /* v. 0.6, github.com/give-me/bookmarklets */
     // Get elements with a dialog and others
     let elements = [];
     switch (location.hostname) {
