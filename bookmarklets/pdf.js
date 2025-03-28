@@ -1,5 +1,5 @@
 (function () {
-    /* v. 0.5, github.com/give-me/bookmarklets */
+    /* v. 0.6, github.com/give-me/bookmarklets */
     // Get elements with a dialog and others
     let elements = [];
     switch (location.hostname) {
@@ -7,7 +7,7 @@
             // Dialog
             elements.push(document.querySelector('div[data-test-render-count]').parentElement);
             // Open artifacts
-            elements.push(document.querySelector('div.fixed div.relative.w-full[class*="overflow-"]'));
+            elements.push(document.querySelector('div.ease-out.w-full[class*="overflow-"]'));
             break;
         case 'chatgpt.com':
             // Dialog
