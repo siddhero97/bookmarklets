@@ -23,9 +23,9 @@
             break;
         case 'gemini.google.com':
             // Dialog
-            elements.push(document.querySelector('div.dialog-element'));
+            elements.push(document.querySelector('query-text-line'));
             // Open artifacts
-            elements.push(document.querySelector('div.artifacts-element'));
+            elements.push(document.querySelector('response-content'));
             break;
         default:
             return alert(location.hostname + ' is not supported. Supported sites are: claude.ai, chatgpt.com, grok.com, gemini.google.com');
