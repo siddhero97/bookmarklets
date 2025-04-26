@@ -21,8 +21,14 @@
             // Open thoughts
             elements.push(document.querySelector('aside'));
             break;
+        case 'gemini.google.com':
+            // Dialog
+            elements.push(document.querySelector('div.dialog-element'));
+            // Open artifacts
+            elements.push(document.querySelector('div.artifacts-element'));
+            break;
         default:
-            return alert(location.hostname + ' is not supported');
+            return alert(location.hostname + ' is not supported. Supported sites are: claude.ai, chatgpt.com, grok.com, gemini.google.com');
     }
     console.debug(`Found elements at ${location.hostname}:`, elements);
     elements = elements.filter(n => n);
